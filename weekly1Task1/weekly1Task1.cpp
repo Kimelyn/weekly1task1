@@ -4,9 +4,8 @@
 #include <string>
 
 std::string name = "";
-//char initial = "";
 int age = 0;
-char initial = 'M';
+char initial = ' ';
 long phone = 0;
 
     int year = 0;
@@ -15,11 +14,10 @@ long phone = 0;
 
 int main()
 {
-    std::cout << "What is your fullname? "; 
     std::cin.ignore();
+    std::cout << "What is your fullname? "; 
     std::getline(std::cin, name);
-    std::cout << "initial ";
-    std::cin >> initial;
+    initial = name[0];
     std::cout << "How old are you? ";
     std::cin >> age;
     std::cout << "What is your phone number? ";
@@ -32,11 +30,13 @@ int main()
     std::cout << "year:";
     std::cin >> year;
 
-    std::cout << "Fullname " << name << std::endl;
-    std::cout << "Initial " << initial << std::endl;
-    std::cout << "Age " << age << std::endl;
-    std::cout << "Phone number " << phone << std::endl;
-    std::cout << "Birthday " <<  day << '/' << month << '/' << year << std::endl;;
+    std::cout << "_________________________________" << std::endl;
+    std::cout << "|Fullname " << "    |" << name << std::endl;
+    std::cout << "|Initial " << "     |" << initial << std::endl;
+    std::cout << "|Age " << "         |" << age << std::endl;
+    std::cout << "|Phone number " << "|" << phone << std::endl;
+    std::cout << "|Birthday " << "    |" << day << '/' << month << '/' << year << std::endl;;
+    std::cout << "__________________________________" << std::endl;;
     
     system("pause");
     return 0;
